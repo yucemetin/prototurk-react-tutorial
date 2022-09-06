@@ -1,15 +1,14 @@
-import logo from './logo.svg';
+import "./App.css"
 
 function App() {
+  const className = process.env.NODE_ENV === "production" ? "info production" : "info development"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="/logo192.png" alt="" />
-        <img src="/logo512.png" alt="" />
-        <img src={logo} className="App-logo" alt="logo" />
 
-      </header>
+    <div className={className}>
+      <h3>{process.env.NODE_ENV}</h3>
+      <img src="/logo512.png" alt="" />
     </div>
+
   );
 }
 

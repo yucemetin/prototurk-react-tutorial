@@ -1,0 +1,24 @@
+.info {
+    position: absolute;
+    background: #f6f6f6;
+    top: 5px;
+    right: 5px;
+    border: 1.5px solid #f67800;
+    border-radius: 30% 0 30% 0;
+    min-width: 100px;
+}
+
+.info img {
+    position: relative;
+    width: 50px;
+    top: 50%;
+    left: 25%;
+}
+
+.development {
+    color: #ff0000;
+}
+
+.production {
+    color: #0db734;
+}
