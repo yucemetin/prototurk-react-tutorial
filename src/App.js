@@ -1,26 +1,28 @@
-import "./App.css"
-import { Title } from "./Component"
-import "./index.css"
-import Tailwind from "./Tailwind"
+import { createElement, Fragment } from "react";
+// <Fragment></Fragment>  => <></>
+import "./main.scss"
 
 function App() {
-  const className = process.env.NODE_ENV === "production" ? "info production" : "info development"
+  /*
+    const h1 = createElement('h1', null, 'METİN YÜCE')
+  
+    return createElement('main', {
+      className: 'test',
+      id: 'main'
+    }, h1)
+  */
+
+  function Button(props) {
+    return <button>{props.abc}</button>
+  }
+
   return (
     <>
-
-      <Title>DENEME</Title>
-      <Title theme="dark">DENEME</Title>
-      <Tailwind/>
-      <h1>{process.env.REACT_APP_API_URL}</h1>
-      <div className={className}>
-        <h3>{process.env.NODE_ENV}</h3>
-        <img src="/logo512.png" alt="" />
-      </div>
+      <label style={{ userSelect: "none" }} tabIndex="2" htmlFor="arama">Arama</label>
+      <input type="text" id="arama" tabIndex="1" />
+      <Button abc="deneme" />
     </>
-  
-  
-
-  );
+  )
 }
 
 export default App;

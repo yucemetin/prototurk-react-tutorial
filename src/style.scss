@@ -1,0 +1,12 @@
+$blue: blue;
+$green: green;
+$white: white;
+
+
+.container{
+    background: $blue;
+    span{
+        background: $green;
+        color: $white;
+    }
+}
